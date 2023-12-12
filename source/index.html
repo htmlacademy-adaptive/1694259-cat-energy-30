@@ -10,14 +10,14 @@
   <body class="page__body">
     <header class="main-header">
       <nav class="main-nav">
-        <a class="main-nav__logo" href="">
-          <img class="main-nav__logo-image" src="" alt="">
-          <img class="main-nav__logo-image-text text-logo" src="" alt="">
+        <a class="main-nav__logo logo" href="">
+          <img class="logo__image" src="" alt="">
+          <img class="logo__text" src="" alt="">
         </a>
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
-            <li class="main-nav__list-item main-nav__list-item--active">
+            <li class="main-nav__item main-nav__list-item--active">
               <a href="">
                 Главная
               </a>
@@ -48,30 +48,32 @@
         <img class=product__image src="" alt="">
       </section>
       <section class="catalog-selection">
-        <div class="catalog-selection__wrapper">
-          <img class="catalog-selection__icon" src="" alt="">
-          <h3 class="catalog-selection__title title">Похудение</h3>
-          <p class="catalog-selection__text default-text">
-            Ваш кот весит больше собаки и почти утратил способность
-            лазить по деревьям? Пора на диету! Cat Energy Slim поможет
-            вашему питомцу сбросить лишний вес.
-          </p>
-          <a class="catalog-selection-link" href="">
-            Каталог slim
-          </a>
-        </div>
-        <div class="catalog-selection__wrapper">
-          <img class="catalog-selection__icon" src="" alt="">
-          <h3 class="catalog-selection__title title">Набор массы</h3>
-          <p class="catalog-selection__text default-text">
-            Заработать авторитет среди дворовых котов и даже собак?
-            Серия Cat Energy Pro поможет вашему коту нарастить
-            необходимые мышцы!
-          </p>
-          <a class="catalog-selection-link" href="">
-            Каталог PRO
-          </a>
-        </div>
+        <ul class="catalog-selection__list">
+          <li class="catalog-selection__item program">
+            <img class="program__icon" src="" alt="">
+            <h3 class="program__title title">Похудение</h3>
+            <p class="program__text text">
+              Ваш кот весит больше собаки и почти утратил способность
+              лазить по деревьям? Пора на диету! Cat Energy Slim поможет
+              вашему питомцу сбросить лишний вес.
+            </p>
+            <a class="program__link" href="">
+              Каталог slim
+            </a>
+          </li>
+          <li class="catalog-selection__item program">
+            <img class="program__icon" src="" alt="">
+            <h3 class="program__title title">Набор массы</h3>
+            <p class="program__text default-text">
+              Заработать авторитет среди дворовых котов и даже собак?
+              Серия Cat Energy Pro поможет вашему коту нарастить
+              необходимые мышцы!
+            </p>
+            <a class="program__link" href="">
+              Каталог PRO
+            </a>
+            </li>
+        </ul>
       </section>
       <section class="benefits">
         <h2 class="benefits__title title">Как это работает</h2>
@@ -126,13 +128,17 @@
           без изнуряющих тренировок! При этом он не менял своих
           привычек и по-прежнему спит по 16 часов в день.
         </p>
-        <div class="example__result-weight-wrapper">
-          <span class="example__weight">5 кг</span>
-          <p class="example__weight-text">снижение веса</p>
-        </div>
-        <div class="example__result-time-wrapper">
-          <span class="example__weight">60 ДНЕЙ</span>
-          <p class="example__weight-text">затрачено времени</p>
+        <div class="example__result result">
+          <ul class="result__list">
+            <li class="result__item">
+              <span class="result__weight">5 кг</span>
+              <p class="result__weight-text">снижение веса</p>
+            </li>
+            <li class="result__item">
+              <span class="result__weight">60 ДНЕЙ</span>
+              <p class="result__weight-text">затрачено времени</p>
+            </li>
+          </ul>
         </div>
         <p class="example__expenses-text">Затраты на питание:</p>
         <span class="example__amount-of-costs">15 000 РУБ.</span>
