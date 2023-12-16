@@ -10,9 +10,13 @@
   <body class="page__body">
     <header class="main-header">
       <nav class="main-nav">
-        <a class="main-nav__logo logo" href="#" aria-label="Переход на главную страницу">
-          <img class="logo__image" src="#" alt="Логотип" width="70" height="59">
-          <img class="logo__text text-logo" src="#" alt="Cat Energy." width="118" height="21">
+        <a class="main-nav__logo logo" href="index.html" aria-label="Переход на главную страницу">
+          <picture class="logo__image">
+            <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo.svg 1x">
+            <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg 1x">
+            <img src="images/logo-mobile.svg" alt="Логотип" width="33" height="38">
+          </picture>
+          <img class="logo__text text-logo" src="images/logo-text.svg" alt="Cat Energy." width="118" height="21">
         </a>
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
@@ -23,12 +27,12 @@
               </a>
             </li>
             <li class="main-nav__list-item">
-              <a href="#">
+              <a href="catalog.html">
                 Каталог продукции
               </a>
             </li>
             <li class="main-nav__list-item">
-              <a href="#">
+              <a href="form.html">
                 Подбор программы
               </a>
             </li>
@@ -45,12 +49,20 @@
         <button class="product__button button" type="button">
           подобрать программу
         </button>
-        <img class="product__image" src="#" alt="Кошачий корм бренда Cat Energy." width="552" height="499">
+        <picture class="product__image">
+          <source width="552" height="499" type="image/png" media="(min-width: 1440px)" srcset="images/product-desktop@1x.png 1x, images/product-desktop@2x.png 2x,">
+          <source width="709" height="609" type="image/png" media="(min-width: 768px)" srcset="images/product-tablet@1x.png 1x, images/product-tablet@2x.png 2x">
+          <img src="images/product-mobile@1x.png" srcset="images/product-mobile@2x.png 2x" alt="Кошачий корм бренда Cat Energy." width="280" height="270">
+        </picture>
       </section>
       <section class="catalog-selection">
         <ul class="catalog-selection__list">
           <li class="catalog-selection__item program">
-            <img class="program__icon" src="#" alt="Силуэт кота." width="100" height="100">
+            <picture class="program__icon">
+              <source width="100" height="106" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/catalog-selection-icon-1.svg 1x">
+              <source width="200" height="200" type="image/svg+xml" media="(min-width: 768px)" srcset="images/catalog-selection-icon-1.svg 1x">
+              <img src="images/catalog-selection-icon-1.svg" alt="Силуэт кота." width="50" height="50">
+            </picture>
             <h3 class="program__title title">Похудение</h3>
             <p class="program__text text">
               Ваш кот весит больше собаки и почти утратил способность
@@ -62,7 +74,11 @@
             </a>
           </li>
           <li class="catalog-selection__item program">
-            <img class="program__icon" src="#" alt="Силуэт пумы." width="100" height="100">
+            <picture class="program__icon">
+              <source width="134" height="100" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/catalog-selection-icon-2.svg 1x">
+              <source width="200" height="200" type="image/svg+xml" media="(min-width: 768px)" srcset="images/catalog-selection-icon-2.svg 1x">
+              <img src="images/catalog-selection-icon-2.svg" alt="Силуэт пумы." width="50" height="50">
+            </picture>
             <h3 class="program__title title">Набор массы</h3>
             <p class="program__text default-text">
               Заработать авторитет среди дворовых котов и даже собак?
@@ -80,7 +96,7 @@
         <ul class="benefits__list">
           <li class="benefits__list-item">
             <div class="benefits__icon-wrapper">
-              <img class="benefits__icon" src="#" alt="Иконка листка." width="30" height="32">
+              <img class="benefits__icon" src="images/benefits-icon-1.svg" alt="Иконка листка." width="30" height="32">
             </div>
             <p class="default-text">
               Функциональное питание
@@ -90,7 +106,7 @@
           </li>
           <li class="benefits__list-item">
             <div class="benefits__icon-wrapper">
-              <img class="benefits__icon" src="#" alt="Иконка растворяющегося в воде порошка." width="26" height="29">
+              <img class="benefits__icon" src="images/benefits-icon-2.svg" alt="Иконка растворяющегося в воде порошка." width="26" height="29">
             </div>
             <p class="default-text">
               Выпускается в виде порошка,
@@ -100,7 +116,7 @@
           </li>
           <li class="benefits__list-item">
             <div class="benefits__icon-wrapper">
-              <img class="benefits__icon" src="#" alt="Иконка вилки с ножом." width="25" height="30">
+              <img class="benefits__icon" src="images/benefits-icon-3.svg" alt="Иконка вилки с ножом." width="25" height="30">
             </div>
             <p class="default-text">
               Замените один-два приема
@@ -110,7 +126,7 @@
           </li>
           <li class="benefits__list-item">
             <div class="benefits__icon-wrapper">
-              <img class="benefits__icon" src="#" alt="Иконка часов." width="26" height="31">
+              <img class="benefits__icon" src="images/benefits-icon-4.svg" alt="Иконка часов." width="26" height="31">
             </div>
             <p class="default-text">
               Уже через месяц наслаждайтесь
@@ -143,8 +159,14 @@
         <p class="example__expenses-text">Затраты на питание:</p>
         <span class="example__amount-of-costs">15 000 РУБ.</span>
         <div class="example__slider">
-          <img class="example__slider-imege" src="#" alt="Толстый кот." width="560" height="512">
-          <img class="example__slider-imege" src="#" alt="Худой кот." width="560" height="512">
+          <picture class="example__slider-imege">
+            <source width="280" height="512" type="image/png" media="(min-width: 768px)" srcset="images/example-slider-cat-1@1x.png 1x, images/example-slider-cat-1@2x.png 2x">
+            <img src="images/example-slider-cat-1-mobile@1x.png" srcset="images/example-slider-cat-1-mobile@2x.png 2x" alt="Толстый кот." width="140" height="256">
+          </picture>
+          <picture class="example__slider-imege">
+            <source width="280" height="512" type="image/png" media="(min-width: 768px)" srcset="images/example-slider-cat-2@1x.png 1x, images/example-slider-cat-2@2x.png 2x">
+            <img src="images/example-slider-cat-2-mobile@1x.png" srcset="images/example-slider-cat-2-mobile@2x.png 2x" alt="Толстый кот." width="140" height="256">
+          </picture>
         </div>
       </section>
     </main>
@@ -161,11 +183,14 @@
             </p>
             <p class="location__adress-city">Санкт-Петербург</p>
           </address>
-          <img class="location__map-pin" src="#" alt="Отметка местоположения на карте." width="113" height="106">
+          <picture class="location__map-pin">
+            <source width="113" height="106" type="image/png" media="(min-width: 768px)" srcset="images/location-pin@1x.png 1x, images/location-pin@2x.png 2x">
+            <img src="images/location-pin-mobile@1x.png" srcset="images/location-pin-mobile@2x.png 2x" alt="Отметка местоположения на карте." width="57" height="53">
+          </picture>
         </div>
       </section>
       <section class="footer">
-        <img class="footer__logo text-logo" src="#" alt="Cat Energy." width="118" height="21">
+        <img class="footer__logo text-logo" src="images/logo-text.svg" alt="Cat Energy." width="118" height="21">
         <ul class="footer__social-list">
           <li class="footer__social-item">
             <a class="footer__social-link" href="#" aria-label="Переход на группу Вконтакте.">
