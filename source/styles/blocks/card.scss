@@ -1,0 +1,16 @@
+@import "../global/fonts.scss";
+
+.card__name{
+  font-family: $additional-font;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.card__product-parametr-list{
+  list-style-type: none;
+}
+
+.card__parametr{
+  font-family: $primary-font;
+  color: red;
+}

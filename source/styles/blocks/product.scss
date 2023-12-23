@@ -1,0 +1,15 @@
+.product{
+  font-family: $additional-font;
+}
+
+.product__title{
+  color: $additional-color-text;
+}
+
+.product__subtitle{
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: $additional-color-text;
+  background-color: rebeccapurple;
+}

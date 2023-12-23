@@ -1,0 +1,34 @@
+.title{
+  font-family: $additional-font;
+  color: $base-title-color;
+
+  &--xl{
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  &--l{
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  &--m{
+    font-size: 24px;
+    line-height: 37px;
+  }
+
+  &--s{
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  &--xs{
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  &--dif-color{
+    color: $additional-color-text;
+  }
+}

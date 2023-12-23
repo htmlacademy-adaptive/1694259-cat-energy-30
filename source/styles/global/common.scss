@@ -1,1 +1,12 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее*/
+@import "./fonts.scss";
+
+body {
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 18px;
+  color: $base-color-text;
+}
+
+
+
