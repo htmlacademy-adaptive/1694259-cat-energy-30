@@ -1,34 +1,34 @@
-.title{
+.title {
   font-family: $additional-font;
   color: $black-text-color;
 
-  &--xl{
+  &--xl {
     font-size: 36px;
     line-height: 40px;
   }
 
-  &--l{
+  &--l {
     font-size: 36px;
     line-height: 36px;
   }
 
-  &--m{
+  &--m {
     font-size: 24px;
     line-height: 37px;
   }
 
-  &--s{
+  &--s {
     font-size: 24px;
     line-height: 24px;
   }
 
-  &--xs{
+  &--xs {
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;
   }
 
-  &--dif-color{
+  &--dif-color {
     color: $white-text-color;
   }
 }

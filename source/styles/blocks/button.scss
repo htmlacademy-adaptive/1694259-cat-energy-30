@@ -1,35 +1,30 @@
-.button{
+.button {
   @include button;
 
-  &--product{
+  &--product {
     font-size: 16px;
     line-height: 20px;
   }
 
-  &--show-more{
+  &--show-more {
     font-size: 16px;
     line-height: 20px;
     color: $base-color-text;
     background-color: $button-grey-background;
   }
 
-  &--card{
+  &--card {
     font-size: 16px;
     line-height: 20px;
   }
 
-  &--extra-card{
+  &--extra-card {
     font-size: 16px;
     line-height: 20px;
   }
 
-  &--form-submit{
+  &--form-submit {
     font-size: 16px;
     line-height: 20px;
   }
-
 }
-
-// body{
-//   background-color: rebeccapurple;
-// }
