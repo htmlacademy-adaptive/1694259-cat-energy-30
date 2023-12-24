@@ -1,6 +1,6 @@
 .title{
   font-family: $additional-font;
-  color: $base-title-color;
+  color: $black-text-color;
 
   &--xl{
     font-size: 36px;
@@ -29,6 +29,6 @@
   }
 
   &--dif-color{
-    color: $additional-color-text;
+    color: $white-text-color;
   }
 }
