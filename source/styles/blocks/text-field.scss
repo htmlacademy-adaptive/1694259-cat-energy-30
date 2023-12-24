@@ -1,0 +1,9 @@
+.text-field::placeholder{
+  font-family: $additional-font;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $base-color-text;
+  opacity: 1;
+}
+
