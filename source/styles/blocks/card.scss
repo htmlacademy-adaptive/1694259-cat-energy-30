@@ -2,6 +2,14 @@
   font-family: $primary-font;
   font-size: 12px;
   line-height: 16px;
+
+  &--last-card::before{
+    content: "";
+    display: block;
+    background-image: url("../../images/icons/stack.svg#card-plus-icon");
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .card__name {
@@ -10,4 +18,3 @@
   line-height: 20px;
   color: $card-title-color;
 }
-

@@ -1,6 +1,44 @@
+.program{
+  background-color: $grey-background-color;
+}
+
+
+.program__title {
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.program__text {
+  font-family: $primary-font;
+}
+
+.program__link {
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 16px;
+
+  &::after{
+    content: "";
+    background-image: url("../../images/icons/stack.svg#catalog-selection-arrow");
+    // mask-image: url("../../images/icons/stack.svg#catalog-selection-arrow");
+    display: block;
+    height: 25px;
+    width: 25px;
+  }
+}
+
 .program__icon-wrapper-1 {
-  background-image: url("/build/images/icons/stack.svg#catalog-selection-icon-1");
-  width: 200px;
-  height: 200px;
+  background-image: url("../../images/icons/stack.svg#catalog-selection-icon-1");
+  width: 50px;
+  height: 53px;
+}
+
+.program__icon-wrapper-2 {
+  background-image: url("../../images/icons/stack.svg#catalog-selection-icon-2");
+  width: 67px;
+  height: 50px;
 }
 
