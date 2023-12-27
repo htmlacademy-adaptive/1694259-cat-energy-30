@@ -8,13 +8,15 @@
   }
 }
 
-@mixin button{
+@mixin button {
   font-family: $additional-font;
   text-transform: uppercase;
   background-color: $base-button-color;
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: center;
   border: none;
   padding: 0;
+  font-size: 16px;
+  line-height: 20px;
 }
 

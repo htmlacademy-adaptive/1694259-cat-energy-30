@@ -1,10 +1,11 @@
-.footer{
+.footer {
   font-family: $primary-font;
   font-size: 16px;
   line-height: 20px;
+  background-color: $grey-background-color;
 }
 
-.footer__academy-logo-link{
+.footer__academy-logo-link {
   text-decoration: none;
-  color: $base-color-text
+  color: $base-color-text;
 }

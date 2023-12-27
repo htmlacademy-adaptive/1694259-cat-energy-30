@@ -1,0 +1,8 @@
+.additional-products__promo::before{
+  content: "";
+  background-image: url("../../images/icons/stack.svg#additional-products-gift-icon");
+  width: 78px;
+  height: 80px;
+  display: block;
+  background-color: rebeccapurple;
+}
