@@ -4,7 +4,11 @@
   line-height: 20px;
   display: flex;
   flex-direction: column;
-  
+
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
 }
 
 .main-nav__list a {

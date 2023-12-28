@@ -6,3 +6,12 @@
   display: block;
   background-color: rebeccapurple;
 }
+
+.additional-products{
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+  }
+}
