@@ -6,4 +6,17 @@
     background-color: $grey-background-color;
   }
 
+  &--nav-toggle{
+    position: relative;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    display: block;
+    width: 70px;
+    height: 51px;
+    background-color: #6a4d38;
+    cursor: pointer;
+    border: none;
+  }
+
 }

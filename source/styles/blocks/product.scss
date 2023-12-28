@@ -1,5 +1,12 @@
 .product {
   font-family: $additional-font;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+  }
+
 }
 
 .product__title {
@@ -12,4 +19,12 @@
   text-transform: uppercase;
   color: $white-text-color;
   background-color: rebeccapurple;
+}
+
+.product__image{
+  order: -1;
+
+  @media (min-width: $tablet-width) {
+    order: 1;
+  }
 }
