@@ -4,15 +4,123 @@
   line-height: 20px;
   display: flex;
   flex-direction: column;
-
+  position: relative;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
   }
 }
 
+.main-nav__list{
+  list-style-type:  none;
+  padding: 0;
+  margin: 0;
+}
+
 .main-nav__list a {
   text-decoration: none;
   color: $black-text-color;
+  position: relative;
+  display: block;
+  padding: 23px 21px;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #ffffff;
+  text-align: center;
+
+  &::before{
+    content: "";
+    top:0;
+    left: -7.2%;
+    display: block;
+    position: absolute;
+    background-color: #E6E6E6;
+    width:  114.29%;
+    height: 1px;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 23px;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  border: none;
+  background-color: #ffffff;
+}
+
+.main-nav--opened .main-nav__toggle {
+  top: 23px;
+  right: 0;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: 0;
+    width: 24px;
+    height: 2px;
+    background-color: black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: opacify(#F06351, 0.3);
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0;
+  width: 24px;
+  height: 2px;
+  background-color: black;
+  box-shadow: 0 8px 0 0 black, 0 16px 0 0 black;
+}
+
+
+.main-nav__item{
+  position: relative;
+  &--last-item:after{
+    content: "";
+    bottom:0;
+    left: -7.2%;
+    display: block;
+    position: absolute;
+    background-color: #E6E6E6;
+    width:  114.29%;
+    height: 1px;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .main-nav--closed .main-nav__item {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__item {
+    display: block;
+  }
 }
 
