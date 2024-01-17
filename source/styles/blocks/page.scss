@@ -1,12 +1,12 @@
 .page__body {
-  padding: 0 6.25%;
-  margin: 0;
+  // padding: 0 20px 0 20px;
+  // margin: 0;
 
   @media (min-width: $tablet-width) {
-    padding: 0 30px;;
+    padding: 25px 3.90625%;;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 110px;;
+    padding: 55px 110px 0 110px;
   }
 }

@@ -9,7 +9,7 @@
   </head>
     <body class="page__body">
       <header class="main-header">
-        <nav class="main-nav">
+        <nav class="main-nav main-nav--closed main-nav--nojs">
           <a class="main-nav__logo logo" href="index.html" aria-label="Переход на главную страницу">
             <picture class="logo__image">
               <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg 1x">
@@ -42,7 +42,7 @@
       </header>
       <main class="main-form">
         <section class="program-selection">
-          <h1 class="title title--l">Подбор программы</h1>
+          <h1 class="program-selection__title title title--l">Подбор программы</h1>
           <h2 class="program-selection__subtitle">
             Заполните анкету, и мы подберем
             программу питания для вашего кота
@@ -55,29 +55,38 @@
                   <ul class="cat-parameters__input-list">
                     <li class="cat-parameters__input-item">
                       <label class="cat-parameters__label input-label" for="name-field">ИМЯ:*</label>
-                      <input class="cat-parameters__input input-field" type="text" name="name" id="name-field" placeholder="барсик" required>
+                      <input class="cat-parameters__input-name input-field" type="text" name="name" id="name-field" placeholder="барсик" required>
                     </li>
                     <li class="cat-parameters__input-item">
                       <label class="cat-parameters__label input-label" for="weight-field">Вес (кг):*</label>
-                      <input class="cat-parameters__input input-field" type="text" name="weight" id="weight-field" placeholder="7" required>
+                      <input class="cat-parameters__input-weight input-field" type="text" name="weight" id="weight-field" placeholder="7" required>
                     </li>
                     <li class="cat-parameters__input-item">
                       <label class="cat-parameters__label input-label" for="age-field">Возраст (лет):</label>
-                      <input class="cat-parameters__input input-field" type="text" name="age" id="age-field" placeholder="7">
+                      <input class="cat-parameters__input-age input-field" type="text" name="age" id="age-field" placeholder="7">
                     </li>
                   </ul>
                   <ul class="cat-parameters__radio-list">
                     <li class="cat-parameters__radio-item">
-                      <input class="cat-parameters__radio-input" type="radio" name="program-goal" id="weight-loss" required checked="checked">
-                      <label class="cat-parameters__label input-label" for="weight-loss">Похудение</label>
+                      <label class="cat-parameters__label" for="weight-loss">
+                        <input class="cat-parameters__radio-input visually-hidden" type="radio" name="program-goal" id="weight-loss" required checked="checked">
+                        <span class="cat-parameters__input-mark"></span>
+                        <span class="cat-parameters__input-label input-label">Похудение</span>
+                      </label>
                     </li>
                     <li class="cat-parameters__radio-item">
-                      <input class="cat-parameters__radio-input" type="radio" name="program-goal" id="mass-gain" required>
-                      <label class="cat-parameters__label input-label" for="mass-gain">Набор массы</label>
+                      <label class="cat-parameters__label" for="mass-gain">
+                        <input class="cat-parameters__radio-input visually-hidden" type="radio" name="program-goal" id="mass-gain" required>
+                        <span class="cat-parameters__input-mark"></span>
+                        <span class="cat-parameters__input-label input-label">Набор массы</span>
+                      </label>
                     </li>
-                    <li class="program-selection__radio-item">
-                      <input class="cat-parameters__radio-input" type="radio" name="program-goal" id="need-help" required>
-                      <label class="cat-parameters__label input-label" for="need-help">Не знаю (Нужен ваш совет)</label>
+                    <li class="cat-parameters__radio-item">
+                      <label class="cat-parameters__label" for="need-help">
+                        <input class="cat-parameters__radio-input visually-hidden" type="radio" name="program-goal" id="need-help" required>
+                        <span class="cat-parameters__input-mark"></span>
+                        <span class="cat-parameters__input-label input-label">Не знаю (Нужен ваш совет)</span>
+                      </label>
                     </li>
                   </ul>
                 </fieldset>
@@ -88,11 +97,11 @@
                   <ul class="contact-details__list">
                     <li class="contact-details__item">
                       <label class="contact-details__label input-label" for="email-field">E-mail:*</label>
-                      <input class="contact-details__input input-field" type="email" name="email" id="email-field" placeholder="кuklachev@gmail.com" required>
+                      <input class="contact-details__input-email input-field" type="email" name="email" id="email-field" placeholder="кuklachev@gmail.com" required>
                     </li>
                     <li class="contact-details__item">
                       <label class="contact-details__label input-label" for="number-field">Телефон:*</label>
-                      <input class="contact-details__input input-field" type="number" name="number" id="number-field" placeholder="8 (960) 900-60-90" required>
+                      <input class="contact-details__input-phone input-field" type="number" name="number" id="number-field" placeholder="8 (960) 900-60-90" required>
                     </li>
                   </ul>
                 </fieldset>
@@ -117,8 +126,10 @@
                       <label class="extra-options__checkbox-title input-label" for="drinking-water">питьевая вода</label>
                     </li>
                     <li class="extra-options__checkbox-item">
-                      <input class="extra-options__checkbox" type="checkbox" name="milk" id="milk">
-                      <label class="extra-options__checkbox-title input-label" for="milk">молоко</label>
+                      <label class="extra-options__checkbox-label" for="milk">
+                        <input class="extra-options__checkbox" type="checkbox" name="milk" id="milk">
+                        <span class="extra-options__checkbox-title input-label">молоко</span>
+                      </label>
                     </li>
                     <li class="extra-options__checkbox-item">
                       <input class="extra-options__checkbox" type="checkbox" name="vitamins" id="vitamins">

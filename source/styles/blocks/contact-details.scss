@@ -1,0 +1,19 @@
+.contact-details__list{
+  list-style: none;
+  padding: 0;
+}
+
+.contact-details__item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 14px;
+}
+
+.contact-details__input-email{
+  width: 217px;
+}
+
+.contact-details__input-phone{
+  width: 200px;
+}

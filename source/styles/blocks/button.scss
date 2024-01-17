@@ -6,17 +6,20 @@
     background-color: $grey-background-color;
   }
 
-  &--nav-toggle{
-    position: relative;
-    top: 0;
-    right: 0;
-    z-index: 2;
-    display: block;
-    width: 70px;
-    height: 51px;
-    background-color: #6a4d38;
-    cursor: pointer;
-    border: none;
+  &--size-m{
+    @include button__mobile;
+
+    @media (min-width: $tablet-width) {
+      width:auto;
+      min-width: 244px;
+      max-width: 300px;
+      min-height: 54px;
+      font-size: 20px;
+      line-height: 26px;
+    }
+
   }
+
+
 
 }

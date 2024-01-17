@@ -4,9 +4,49 @@
   text-transform: uppercase;
   font-size: 16px;
   line-height: 20px;
+  padding-right: 16px;
+
+  @media (min-width: $tablet-width) {
+    width: 23.0225988701%;
+    padding: 0;
+    padding-left: 40px;
+
+  }
 }
 
 .location__adress {
   font-size: 14px;
   line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 80px;
+    width: 157px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    padding-right: 40px;
+  }
+
+}
+
+.location__adress-wrapper{
+  display: flex;
+  align-items: center;
+  padding: 26px 0 26px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 0 60px 0;
+    justify-content: space-between;
+  }
+}
+
+.location__adress-city{
+  margin: 0;
+}
+
+.location__adress-street{
+  margin: 0
 }

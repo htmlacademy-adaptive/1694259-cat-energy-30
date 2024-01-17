@@ -1,0 +1,70 @@
+.cat-parameters__input-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 24px;
+}
+
+.cat-parameters__input-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 14px;
+}
+
+.cat-parameters__input-name{
+  box-sizing: border-box;
+  width: 228px;
+}
+
+.cat-parameters__input-weight{
+  box-sizing: border-box;
+  width: 207px;
+}
+
+.cat-parameters__input-age{
+  box-sizing: border-box;
+  width: 173px;
+}
+
+.cat-parameters__radio-list{
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.cat-parameters__radio-item{
+  position: relative;
+  padding-bottom: 25px;
+
+  .cat-parameters__label{
+    padding-left: 45px;
+  }
+}
+
+
+.cat-parameters__input-mark{
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-color: $white-text-color;
+  border-radius: 50%;
+  border: 1px $example-border-color solid;
+}
+
+.cat-parameters__radio-input[type="radio"]:checked + .cat-parameters__input-mark::before {
+  position: absolute;
+  top: 8.5px;
+  left: 8.5px;
+  width: 13px;
+  height: 13px;
+  background-color: $base-button-color;
+  border-radius: 50%;
+  content: "";
+}

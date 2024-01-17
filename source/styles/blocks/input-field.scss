@@ -7,3 +7,10 @@
   opacity: 1;
 }
 
+.input-field{
+  box-sizing: border-box;
+  padding-left: 15px;
+  height: 45px;
+  border: 1px solid $input-border-color;
+}
+

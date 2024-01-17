@@ -1,7 +1,12 @@
 .logo{
   display: flex;
   align-items: center;
-  height: 65px;
+  height: 38px;
+  @media (min-width: $tablet-width) {
+    gap: 13px;
+
+  }
+
 }
 
 .logo__text{
@@ -9,4 +14,11 @@
   position: absolute;
   margin-left: 31.78571429%;
   margin-right: 32.14285714%;
+
+  @media (min-width: $tablet-width) {
+    width: 101px;
+    position: static;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
 }
