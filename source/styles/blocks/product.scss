@@ -1,29 +1,32 @@
-.product {
-  font-family: $additional-font;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-
+.product{
   @media (max-width: $mobile-width-only){
+    position: relative;
+    background-image: image-set(
+      url("../../images/product-mobile@1x.png") type("image/png") 1x,
+      url("../../images/product-mobile@2x.png") type("image/png") 2x
+    );
+    background-repeat: no-repeat;
+    background-position: bottom 43px center;
 
     &::before{
       content: "";
       position: absolute;
       display: block;
       background-color: rgba(104, 183, 56, 0.85);
-      left: -7.1428571429%;
-      width:  114.29%;
+      left: 0;
+      width:  100%;
       height: 62.9166666667%;
-      z-index: 0;
+      z-index: -1;
     }
 
     &::after{
-      z-index: -1;
+      z-index: -2;
       content: "";
       position: absolute;
       display: block;
-      width:  114.29%;
-      left: -7.1428571429%;
+      width:  100%;
+      top:0;
+      left: 0;
       height: 62.9166666667%;
       background-image: url("../../images/product-background-mobile@2x.png");
       background-repeat: no-repeat;
@@ -32,39 +35,67 @@
     }
   }
 
-  @media (min-width: $desktop-width) {
-    padding-bottom: 372px;
+  @media (min-width: $tablet-width){
+    padding-bottom: 526px;
+    background-image: image-set(
+      url("../../images/product-tablet@1x.png") type("image/png") 1x,
+      url("../../images/product-tablet@2x.png") type("image/png") 2x
+    );
+    background-repeat: no-repeat;
+    background-position: bottom center
+  }
 
-    &::before{
+  @media (min-width: $desktop-width) {
+    padding-bottom: 184px;
+    box-sizing: border-box;
+
+    background-image: image-set(
+      url("../../images/product-desktop@1x.png") type("image/png") 1x,
+      url("../../images/product-desktop@2x.png") type("image/png") 2x
+    );
+    background-repeat: no-repeat;
+    background-position: bottom 52px left 63%;
+
+     &::before{
       content: "";
       position: absolute;
       display: block;
-      width: 59%;
       background-color: rgba(104, 183, 56, 0.85);
-      height: 117.22054381%;
+      height: 694px;
+      width: 50%;
       z-index: -4;
-      top:-114px;
-      right: -9%;
+      top: 0;
+      right: 0;
     }
 
     &::after{
       content: "";
       position: absolute;
       display: block;
-      width: 59%;
-      height: 117.22054381%;
-      z-index: -5;
-      top:-114px;
-      right: -9%;
+      width: 50%;
+      height: 694px;
+      z-index: -50;
+      top: 0;
+      right: 0;
       background-image: url("../../images/product-background-desktop@2x.png");
-      background-position: right;
+      background-position: left;
       background-size: cover;
       background-repeat: no-repeat;
     }
 
 
   }
+}
 
+
+
+
+
+.product__wrapper {
+  font-family: $additional-font;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 
@@ -132,17 +163,18 @@
 
 .product__button{
   order: 4;
+  margin-top: 302px;
 
   @media (min-width: $tablet-width) {
-    position: absolute;
-    top: 295px;
-    z-index: 5;
-    left: 90px;
+    margin-left: 90px;
+    margin-top: 50px;
   }
 
   @media (min-width: $desktop-width) {
     top: 342px;
     left: 80px;
+    margin-left: 80px;
+    margin-top: 52px;
   }
 
 }

@@ -1,0 +1,114 @@
+.extra-options{
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.extra-options__title{
+  padding-top: 23px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 65px;
+
+    &::after{
+      content: "";
+      position: absolute;
+      display: block;
+      height: 2px;
+      width: 3000px;
+      background-color: $base-button-color;
+      top:89px;
+      right: 251px;
+
+      @media (min-width: $desktop-width) {
+        top: 95px;
+      }
+    }
+  }
+
+  &::before{
+    content: "";
+    position: absolute;
+    display: block;
+    height: 2px;
+    width: 139px;
+    background-color: $base-button-color;
+    top: 40px;
+    right:-115%;
+
+    @media (min-width: $tablet-width) {
+      right:-831%;
+      width: 1716px;
+      top: 87px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 95px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 70px 0 57px 0;
+  }
+
+}
+
+.extra-options__checkbox-list{
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(253px, auto));
+    grid-template-rows: 1fr 1fr;
+    row-gap: 32px;
+    column-gap: 122px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, minmax(245px, auto));
+    column-gap: 80px;
+  }
+}
+
+.extra-options__checkbox-item{
+  position: relative;
+}
+
+.extra-options__input-mark{
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 1px $example-border-color solid;
+  box-sizing: border-box;
+  top: -6px;
+
+  @media (min-width: $tablet-width) {
+    top:0;
+  }
+}
+
+.extra-options__checkbox[type="checkbox"]:checked+.extra-options__input-mark::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 26px;
+  height: 26px;
+  top: 2px;
+  right: 2px;
+  background-image: url("../../images/icons/stack.svg#extra-options-checkbox-tick");
+}
+
+.extra-options__checkbox-title{
+  padding-left: 45px;
+
+  @media (min-width: $desktop-width) {
+    padding-left: 60px;
+  }
+}
+
+

@@ -5,6 +5,12 @@
   text-transform: uppercase;
   color: $base-color-text;
   opacity: 1;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+  }
 }
 
 .input-field{
@@ -12,5 +18,9 @@
   padding-left: 15px;
   height: 45px;
   border: 1px solid $input-border-color;
+
+  @media (min-width: $tablet-width) {
+    height: 52px;
+  }
 }
 
