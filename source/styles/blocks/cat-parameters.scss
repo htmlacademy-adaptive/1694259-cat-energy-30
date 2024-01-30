@@ -97,6 +97,14 @@
   }
 }
 
+.cat-parameters__label{
+  &:hover{
+    .cat-parameters__input-mark{
+      border-color: $radio-and-checkbox-hover;
+    }
+  }
+}
+
 
 .cat-parameters__input-mark{
   position: absolute;
@@ -122,4 +130,8 @@
   background-color: $base-button-color;
   border-radius: 50%;
   content: "";
+}
+
+.cat-parameters__label:has(.cat-parameters__radio-input:disabled){
+  opacity: 0.3;
 }

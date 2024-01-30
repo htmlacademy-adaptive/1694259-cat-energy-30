@@ -1,6 +1,7 @@
 .contact-details__list{
   list-style: none;
   padding: 0;
+  position: relative;
 
   @media (min-width: $desktop-width) {
     display: grid;
@@ -28,6 +29,10 @@
   }
 }
 
+.contact-details__label{
+  padding-right: 13px;
+}
+
 .contact-details__input-phone{
   width: 200px;
 
@@ -41,6 +46,7 @@
 }
 
 .contact-details__title{
+  width: 187px;
   &::before{
     content: "";
     position: absolute;
@@ -49,7 +55,7 @@
     width: 93px;
     background-color: $base-button-color;
     top: 44px;
-    right: -7.14%;
+    right: -58.14%;
 
     @media (min-width: $tablet-width) {
       top:89px;
@@ -62,7 +68,13 @@
     }
   }
 
+  @media (min-width: $mobile-width) {
+    padding-top: 26px;
+    padding-bottom: 35px;
+  }
+
   @media (min-width: $tablet-width) {
+    width: auto;
     padding-top: 65px;
     padding-bottom: 76px;
     &::after{
@@ -83,6 +95,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    width: auto;
     padding-top: 70px;
     padding-bottom: 76px;
   }

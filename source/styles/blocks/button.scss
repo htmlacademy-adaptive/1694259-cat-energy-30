@@ -45,4 +45,12 @@
     }
   }
 
+  &:hover{
+    background-color: $hover-button-color;
+  }
+
+  &:active{
+    color: transparentize($white-text-color, 0.7)
+  }
+
 }

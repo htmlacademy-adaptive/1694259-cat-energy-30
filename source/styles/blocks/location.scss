@@ -13,6 +13,7 @@
   text-transform: uppercase;
   font-size: 16px;
   line-height: 20px;
+  width: 140px;
   padding-right: 16px;
 
   @media (min-width: $tablet-width) {
@@ -40,6 +41,7 @@
     line-height: 20px;
     font-weight: 400;
     padding-right: 40px;
+    text-align: right;
   }
 
   @media (min-width: $desktop-width) {
@@ -84,7 +86,7 @@
   min-height: 362px;
   display: block;
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     height: 400px;
   }
 

@@ -6,10 +6,10 @@
 
 .extra-options__title{
   padding-top: 23px;
-
+  padding-bottom: 34px;
   @media (min-width: $tablet-width) {
     padding-top: 65px;
-
+    padding-bottom: 57px;
     &::after{
       content: "";
       position: absolute;
@@ -103,12 +103,32 @@
   background-image: url("../../images/icons/stack.svg#extra-options-checkbox-tick");
 }
 
+.extra-options__checkbox{
+  &:disabled{
+    .extra-options__checkbox-label{
+      opacity: 0.3;
+    }
+  }
+}
+
 .extra-options__checkbox-title{
   padding-left: 45px;
 
   @media (min-width: $desktop-width) {
     padding-left: 60px;
   }
+}
+
+.extra-options__checkbox-label{
+  &:hover{
+    .extra-options__input-mark{
+      border-color: $radio-and-checkbox-hover;
+    }
+  }
+}
+
+.extra-options__checkbox-label:has(.extra-options__checkbox:disabled){
+  opacity: 0.3;
 }
 
 

@@ -7,6 +7,13 @@
 
   }
 
+  &:hover{
+    opacity: 0.8;
+  }
+
+  &:active{
+    opacity: 0.6;
+  }
 }
 
 .logo__text{
@@ -16,7 +23,8 @@
   margin-right: 32.14285714%;
 
   @media (min-width: $tablet-width) {
-    width: 101px;
+    width: 118px;
+    height: 21px;
     position: static;
     margin-left: 0%;
     margin-right: 0%;

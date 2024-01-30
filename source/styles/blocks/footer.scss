@@ -1,5 +1,5 @@
 .footer{
-  padding: 40px 0;
+  padding: 39px 0;
   background-color: $grey-background-color;
 
   @media (min-width: $tablet-width) {
@@ -24,7 +24,7 @@
   justify-content: space-between;
 
   @media (max-width: $mobile-width-only){
-    gap: 40px;
+    gap: 35px;
   }
 
   @media (min-width: $tablet-width) {
@@ -48,6 +48,16 @@
   @media (min-width: $tablet-width) {
     min-width: 168px;
     justify-content: flex-end;
+  }
+
+  &:hover,
+  &:focus{
+    .footer__academy-logo-image{
+      fill: $base-button-color;
+    }
+  }
+  &:active{
+    opacity: 0.3;
   }
 }
 
@@ -75,7 +85,25 @@
 }
 
 .footer__logo{
-  @media (min-width: $tablet-width) {
-    min-width: 118px;
+  &:hover,
+  &:focus{
+    fill: $footer-site-logo-hover;
+  }
+
+  &:active{
+    fill: $footer-site-logo-active;
+  }
+}
+
+.footer__social-link{
+  .footer__social-icon{
+    &:hover,
+    &:focus{
+      fill: $base-button-color;
+    }
+
+    &:active{
+      opacity: 0.3;
+    }
   }
 }
