@@ -1,0 +1,37 @@
+.logo {
+  display: flex;
+  align-items: center;
+  height: 38px;
+
+  @media (min-width: $tablet-width) {
+    gap: 13px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.logo__text {
+  width: 36.07%;
+  position: absolute;
+  margin-left: 31.79%;
+  margin-right: 32.14%;
+
+  @media (min-width: $tablet-width) {
+    width: 101px;
+    height: 18px;
+    position: static;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 118px;
+    height: 21px;
+  }
+}

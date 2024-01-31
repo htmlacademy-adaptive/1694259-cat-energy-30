@@ -5,5 +5,70 @@
   text-transform: uppercase;
   color: $base-color-text;
   opacity: 1;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+  }
+}
+
+.input-field {
+  position: relative;
+  box-sizing: border-box;
+  padding-left: 15px;
+  height: 45px;
+  border: 1px solid $input-border-color;
+  font-family: $additional-font;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding-right: 15px;
+
+  @media (min-width: $tablet-width) {
+    height: 52px;
+    padding-left: 20px;
+  }
+
+  &:hover {
+    border-color: $example-border-color;
+  }
+
+  &:focus {
+    border: 1px solid transparent;
+    outline: 2px solid $base-color-text;
+
+    & + .input-field__icon {
+      stroke: $base-button-color;
+    }
+  }
+
+  &:user-invalid {
+    border: 1px solid transparent;
+    outline: 2px solid $input-error;
+
+    & + .input-field__icon {
+      stroke: $input-error;
+    }
+  }
+}
+
+.input-field__icon {
+  position: relative;
+  right: 33px;
+  stroke: $input-filed-icon-color;
+}
+
+.input-field[type="number"]::-webkit-outer-spin-button,
+.input-field[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.input-field[type="number"],
+.input-field[type="number"]:hover,
+.input-field[type="number"]:focus {
+  appearance: none;
+  -moz-appearance: textfield;
 }
 

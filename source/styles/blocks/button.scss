@@ -1,9 +1,55 @@
 .button {
   @include button;
 
-  &--show-more {
-    color: $base-color-text;
-    background-color: $grey-background-color;
+  &--size-s {
+    @include button__mobile;
   }
 
+  &--size-m {
+    @include button__mobile;
+
+    @media (min-width: $tablet-width) {
+      width: max-content;
+      max-width: 400px;
+      min-height: 54px;
+      font-size: 20px;
+      line-height: 26px;
+      // box-sizing: border-box;
+      padding: 14px 26px;
+      font-weight: 400;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin: 0;
+    }
+  }
+
+  &--size-l {
+    @include button__mobile;
+  }
+
+  &--size-xl {
+    @include button__mobile;
+
+    @media (min-width: $tablet-width) {
+      width: 284px;
+      min-height: 54px;
+      font-size: 20px;
+      line-height: 26px;
+      font-weight: 400;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 570px;
+      font-weight: 400;
+    }
+  }
+
+  &:hover {
+    background-color: $hover-button-color;
+  }
+
+  &:active {
+    color: transparentize($white-text-color, 0.7);
+  }
 }

@@ -1,15 +1,179 @@
 .product {
-  font-family: $additional-font;
+  @media (max-width: $mobile-width-only) {
+    position: relative;
+    background-image:
+      image-set(
+      url("../../images/product-mobile@1x.png") type("image/png") 1x,
+      url("../../images/product-mobile@2x.png") type("image/png") 2x
+    );
+    background-repeat: no-repeat;
+    background-position: bottom 43px center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      background-color: rgba(104, 183, 56, 0.85);
+      left: 0;
+      width: 100%;
+      height: 62.92%;
+      z-index: -1;
+    }
+
+    &::after {
+      z-index: -2;
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      top: 0;
+      left: 0;
+      height: 62.92%;
+      background-image: url("../../images/product-background-mobile@2x.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 526px;
+    background-image:
+      image-set(
+      url("../../images/product-tablet@1x.png") type("image/png") 1x,
+      url("../../images/product-tablet@2x.png") type("image/png") 2x
+    );
+    background-repeat: no-repeat;
+    background-position: bottom center;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 184px;
+    box-sizing: border-box;
+
+    background-image:
+      image-set(
+      url("../../images/product-desktop@1x.png") type("image/png") 1x,
+      url("../../images/product-desktop@2x.png") type("image/png") 2x
+    );
+    background-repeat: no-repeat;
+    background-position: bottom 52px left 63%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      background-color: rgba(104, 183, 56, 0.85);
+      height: 694px;
+      width: 50%;
+      z-index: -4;
+      top: 0;
+      right: 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 50%;
+      height: 694px;
+      z-index: -50;
+      top: 0;
+      right: 0;
+      background-image: url("../../images/product-background-desktop@2x.png");
+      background-position: left;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
 }
 
+
+.product__wrapper {
+  font-family: $additional-font;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+
 .product__title {
-  color: $white-text-color;
+  z-index: 1;
+  order: 1;
+  text-align: center;
+  padding-top: 27px;
+
+  @media (min-width: $tablet-width) {
+    width: 417px;
+    padding-left: 90px;
+    order: 1;
+    text-align: left;
+    padding-top: 65px;
+    font-weight: 400;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 110px 0 0 80px;
+  }
 }
 
 .product__subtitle {
+  order: 2;
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
   color: $white-text-color;
-  background-color: rebeccapurple;
+  z-index: 2;
+  text-align: center;
+  margin: 25px 0 0 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    color: $black-text-color;
+    text-align: left;
+    padding-left: 90px;
+    margin: 0;
+    padding-top: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 40px 0 0 80px;
+  }
+}
+
+.product__image {
+  padding-top: 29px;
+  z-index: 2;
+  order: 3;
+  text-align: center;
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    z-index: -2;
+    left: 447px;
+    top: 0;
+  }
+}
+
+.product__button {
+  order: 4;
+  margin-top: 302px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 90px;
+    margin-top: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 342px;
+    left: 80px;
+    margin-left: 80px;
+    margin-top: 52px;
+  }
 }

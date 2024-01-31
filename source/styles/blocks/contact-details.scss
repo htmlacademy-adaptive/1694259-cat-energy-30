@@ -1,0 +1,124 @@
+.contact-details__list {
+  list-style: none;
+  padding: 0;
+  position: relative;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(570px, auto));
+    column-gap: 80px;
+  }
+}
+
+.contact-details__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 14px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+  }
+}
+
+.contact-details__input-email {
+  width: 213px;
+
+  @media (min-width: $tablet-width) {
+    width: 550px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 36px;
+    width: 490px;
+  }
+}
+
+.contact-details__label {
+  padding-right: 13px;
+}
+
+.contact-details__input-phone {
+  width: 200px;
+
+  @media (min-width: $tablet-width) {
+    width: 530px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 36px;
+    width: 472px;
+  }
+}
+
+.contact-details__input-email-icon {
+  position: absolute;
+  right: 16px;
+}
+
+.contact-details__input-icon {
+  position: absolute;
+  right: 16px;
+}
+
+.contact-details__title {
+  width: 187px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 2px;
+    width: 93px;
+    background-color: $base-button-color;
+    top: 42px;
+    right: -57%;
+
+    @media (min-width: $tablet-width) {
+      top: 87px;
+      left: 552px;
+      width: 3555px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 92px;
+    }
+  }
+
+  @media (min-width: $mobile-width) {
+    padding-top: 26px;
+    padding-bottom: 35px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    padding-top: 65px;
+    padding-bottom: 76px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 2px;
+      width: 3000px;
+      background-color: $base-button-color;
+      top: 87px;
+      right: 557px;
+      z-index: 2;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+    padding-top: 70px;
+    padding-bottom: 76px;
+
+    &::after {
+      top: 92px;
+    }
+  }
+}
