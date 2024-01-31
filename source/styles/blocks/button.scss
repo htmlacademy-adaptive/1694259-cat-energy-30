@@ -1,13 +1,13 @@
 .button {
   @include button;
 
-  &--size-s{
+  &--size-s {
     @include button__mobile;
   }
 
-  &--size-m{
-
+  &--size-m {
     @include button__mobile;
+
     @media (min-width: $tablet-width) {
       width: max-content;
       max-width: 400px;
@@ -24,11 +24,11 @@
     }
   }
 
-  &--size-l{
+  &--size-l {
     @include button__mobile;
   }
 
-  &--size-xl{
+  &--size-xl {
     @include button__mobile;
 
     @media (min-width: $tablet-width) {
@@ -45,12 +45,11 @@
     }
   }
 
-  &:hover{
+  &:hover {
     background-color: $hover-button-color;
   }
 
-  &:active{
-    color: transparentize($white-text-color, 0.7)
+  &:active {
+    color: transparentize($white-text-color, 0.7);
   }
-
 }

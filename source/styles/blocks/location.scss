@@ -1,4 +1,10 @@
-.location__wrapper{
+.location {
+
+  background-color: $grey-background-color;
+}
+
+
+.location__wrapper {
   position: relative;
 
   @media (min-width: $tablet-width) {
@@ -17,7 +23,7 @@
   padding-right: 16px;
 
   @media (min-width: $tablet-width) {
-    width: 23.0225988701%;
+    width: 23.02%;
     padding: 0;
     padding-left: 40px;
   }
@@ -46,11 +52,13 @@
 
   @media (min-width: $desktop-width) {
     padding-right: 78px;
+    text-align: left;
+    font-style: normal;
   }
-
 }
 
-.location__adress-wrapper{
+
+.location__adress-wrapper {
   display: flex;
   align-items: center;
   padding: 26px 0 26px 0;
@@ -66,21 +74,21 @@
     width: 565px;
     min-height: 199px;
     box-sizing: border-box;
-    top: 95px;
+    top: 93px;
     left: 110px;
+    padding-top: 61px;
   }
-
 }
 
-.location__adress-city{
+.location__adress-city {
   margin: 0;
 }
 
-.location__adress-street{
-  margin: 0
+.location__adress-street {
+  margin: 0;
 }
 
-.location__map{
+.location__map {
   border: 0;
   width: 100%;
   min-height: 362px;
@@ -89,12 +97,11 @@
   @media (min-width: $tablet-width) {
     height: 400px;
   }
-
 }
 
-.location__map-pin{
+.location__map-pin {
   position: absolute;
-  bottom:-190px;
+  bottom: -190px;
   right: 135px;
 
   @media (min-width: $desktop-width) {

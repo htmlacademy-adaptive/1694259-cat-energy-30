@@ -1,84 +1,100 @@
-.extra-options{
+.extra-options {
   padding: 0;
   margin: 0;
   border: 0;
 }
 
-.extra-options__title{
-  padding-top: 23px;
-  padding-bottom: 34px;
+.extra-options__title {
+  padding-top: 20px;
+  padding-bottom: 38px;
+
   @media (min-width: $tablet-width) {
-    padding-top: 65px;
-    padding-bottom: 57px;
-    &::after{
+    padding-top: 61px;
+    padding-bottom: 62px;
+
+    &::after {
       content: "";
       position: absolute;
       display: block;
       height: 2px;
       width: 3000px;
       background-color: $base-button-color;
-      top:89px;
-      right: 251px;
-
-      @media (min-width: $desktop-width) {
-        top: 95px;
-      }
+      top: 83px;
+      right: 255px;
     }
   }
 
-  &::before{
+  &::before {
     content: "";
     position: absolute;
     display: block;
     height: 2px;
     width: 139px;
     background-color: $base-button-color;
-    top: 40px;
-    right:-115%;
+    top: 34px;
+    right: -107%;
 
     @media (min-width: $tablet-width) {
-      right:-831%;
+      right: -814%;
       width: 1716px;
-      top: 87px;
+      top: 83px;
     }
 
     @media (min-width: $desktop-width) {
-      top: 95px;
+      top: 89px;
+      right: -831%;
+      width: 1716px;
     }
   }
 
   @media (min-width: $desktop-width) {
-    padding: 70px 0 57px 0;
-  }
+    padding: 67px 0 60px 0;
 
+    &::after {
+      top: 88px;
+      right: 250px;
+    }
+  }
 }
 
-.extra-options__checkbox-list{
+.extra-options__checkbox-list {
   list-style: none;
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 25px;
 
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, minmax(253px, auto));
     grid-template-rows: 1fr 1fr;
-    row-gap: 32px;
-    column-gap: 122px;
+    row-gap: 43px;
+    column-gap: 60px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(4, minmax(245px, auto));
     column-gap: 80px;
+    grid-template-rows: auto;
   }
 }
 
-.extra-options__checkbox-item{
+.extra-options__checkbox-item {
   position: relative;
+
+  @media (max-width: $mobile-width-only) {
+    padding-bottom: 25px;
+
+    &:nth-child(2) {
+      padding-bottom: 23px;
+    }
+
+    &:nth-child(3) {
+      padding-bottom: 21px;
+    }
+  }
 }
 
-.extra-options__input-mark{
+.extra-options__input-mark {
   content: "";
   position: absolute;
   width: 30px;
@@ -88,47 +104,58 @@
   top: -6px;
 
   @media (min-width: $tablet-width) {
-    top:0;
+    top: -5px;
+    width: 40px;
+    height: 40px;
   }
 }
 
-.extra-options__checkbox[type="checkbox"]:checked+.extra-options__input-mark::after {
+.extra-options__checkbox[type="checkbox"]:checked + .extra-options__input-mark::after {
   content: "";
   position: absolute;
   display: block;
-  width: 26px;
-  height: 26px;
+  width: 18px;
+  height: 14px;
   top: 2px;
   right: 2px;
   background-image: url("../../images/icons/stack.svg#extra-options-checkbox-tick");
+
+  @media (min-width: $tablet-width) {
+    top: 6px;
+    right: 4.5px;
+    width: 30px;
+    height: 30px;
+  }
 }
 
-.extra-options__checkbox{
-  &:disabled{
-    .extra-options__checkbox-label{
+.extra-options__checkbox {
+  &:disabled {
+    .extra-options__checkbox-label {
       opacity: 0.3;
     }
   }
 }
 
-.extra-options__checkbox-title{
+.extra-options__checkbox-title {
   padding-left: 45px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 60px;
+  }
 
   @media (min-width: $desktop-width) {
     padding-left: 60px;
   }
 }
 
-.extra-options__checkbox-label{
-  &:hover{
-    .extra-options__input-mark{
+.extra-options__checkbox-label {
+  &:hover {
+    .extra-options__input-mark {
       border-color: $radio-and-checkbox-hover;
     }
   }
 }
 
-.extra-options__checkbox-label:has(.extra-options__checkbox:disabled){
+.extra-options__checkbox-label:has(.extra-options__checkbox:disabled) {
   opacity: 0.3;
 }
-
-

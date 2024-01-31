@@ -9,7 +9,7 @@
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
-    justify-content: space-between;
+    gap: 98px;
     align-items: center;
     font-size: 18px;
     line-height: 24px;
@@ -22,20 +22,21 @@
     font-size: 20px;
     padding-top: 55px;
     line-height: normal;
+    gap: 542px;
   }
 }
 
-.main-nav__wrapper{
+.main-nav__wrapper {
   flex-wrap: wrap;
 
   @media (min-width: $tablet-width) {
     display: flex;
     align-items: center;
-}
+  }
 }
 
 
-.main-nav__list{
+.main-nav__list {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -45,7 +46,7 @@
     width: 114.29%;
     left: -7.2%;
     top: 65px;
-    background-color:$white-text-color;
+    background-color: $white-text-color;
     z-index: 5;
   }
 
@@ -60,32 +61,30 @@
     width: max-content;
     max-width: 610px;
   }
-
 }
 
 .main-nav__link {
   text-decoration: none;
-  color: $black-text-color;
   position: relative;
   z-index: 5;
   display: block;
   padding: 23px 21px;
   color: $location-title-color;
   text-transform: uppercase;
-  text-decoration: none;
   text-align: center;
 
   @media (min-width: $tablet-width) {
     padding: 0;
   }
-  &::before{
+
+  &::before {
     content: "";
-    top:0;
+    top: 0;
     left: -7.2%;
     display: block;
     position: absolute;
-    background-color: #E6E6E6;
-    width:  114.29%;
+    background-color: $secondary-white-color;
+    width: 114.29%;
     height: 1px;
 
     @media (min-width: $tablet-width) {
@@ -93,14 +92,13 @@
     }
   }
 
-    @media (min-width: $desktop-width) {
-      color: $white-text-color;
+  @media (min-width: $desktop-width) {
+    color: $white-text-color;
+  }
 
-    }
-
-    &--basic{
-      color: $location-title-color;
-    }
+  &--basic {
+    color: $location-title-color;
+  }
 }
 
 .main-nav__toggle {
@@ -121,7 +119,6 @@
 }
 
 .main-nav--opened .main-nav__toggle {
-  top: 11px;
   right: 0;
 
   &::before,
@@ -132,46 +129,49 @@
     right: 0;
     width: 24px;
     height: 2px;
-    background-color: black;
+    background-color: $black-text-color;
   }
 
   &::before {
+    top: 8px;
     transform: rotate(45deg);
     box-shadow: none;
   }
 
   &::after {
+    top: 8px;
     transform: rotate(-45deg);
   }
 
   &:active::before,
   &:active::after {
-    background-color: opacify(#F06351, 0.3);
+    background-color: opacify($input-error, 0.3);
   }
 }
 
 .main-nav--closed .main-nav__toggle::before {
   content: "";
   position: absolute;
-  top: 0px;
+  top: 0;
   right: 0;
   width: 24px;
   height: 2px;
-  background-color: black;
-  box-shadow: 0 8px 0 0 black, 0 16px 0 0 black;
+  background-color: $black-text-color;
+  box-shadow: 0 8px 0 0 $black-text-color, 0 16px 0 0 $black-text-color;
 }
 
 
-.main-nav__item{
+.main-nav__item {
   position: relative;
-  &--last-item:after{
+
+  &--last-item::after {
     content: "";
-    bottom:0;
+    bottom: 0;
     left: -7.2%;
     display: block;
     position: absolute;
-    background-color: #E6E6E6;
-    width:  114.29%;
+    background-color: $secondary-white-color;
+    width: 114.29%;
     height: 1px;
 
     @media (min-width: $tablet-width) {
@@ -179,39 +179,45 @@
     }
   }
 
-  &--active{
+  &--active {
     position: relative;
-    &::after{
+
+    &::after {
       content: "";
       display: block;
       position: absolute;
       width: 100%;
       height: 2px;
       background-color: $base-button-color;
-      top:36px;
-      left:0;
-      @media (max-width: $mobile-width-only) {
+      top: 36px;
+      left: 0;
+    }
+
+    @media (max-width: $mobile-width-only) {
+      &::after {
         display: none;
       }
+    }
 
-      @media (min-width: $tablet-width) {
-        top:38px
+    @media (min-width: $tablet-width) {
+      &::after {
+        top: 33px;
       }
     }
   }
 
-  &:hover{
+  &:hover {
     opacity: 0.6;
   }
 
-  &:active{
+  &:active {
     opacity: 0.3;
   }
 }
 
-.main-nav__item--active-index-desktop{
+.main-nav__item--active-index-desktop {
   @media (min-width: $desktop-width) {
-    &::after{
+    &::after {
       background-color: $white-text-color;
     }
   }

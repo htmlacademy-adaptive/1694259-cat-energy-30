@@ -2,27 +2,29 @@
   font-family: $primary-font;
   font-size: 12px;
   line-height: 16px;
-  padding: 20px 0 25px 0;
+  padding: 21px 20px 25px 20px;
   display: grid;
+  font-weight: 400;
   // grid-template-columns: 140px 140px;
   grid-template-columns: repeat(2, minmax(140px, auto));
   grid-template-rows: repeat(3, auto);
   grid-template-areas:
-  "image title"
-  "image list"
-  "button button";
+    "image title"
+    "image list"
+    "button button";
+  box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: minmax(250px, auto);
-    // grid-template-rows: repeat(4, auto);
     grid-template-areas:
-    "image"
-    "title"
-    "list"
-    "button";
+      "image"
+      "title"
+      "list"
+      "button";
     padding: 10px 37px 40px 37px;
     position: relative;
-    &::after{
+
+    &::after {
       content: "";
       display: block;
       position: absolute;
@@ -31,29 +33,30 @@
       height: 430px;
       z-index: -1;
       bottom: 0;
-
     }
 
-    @media (min-width: $desktop-width){
+    @media (min-width: $desktop-width) {
       padding: 10px 38px 40px 38px;
       grid-template-columns: repeat(4, 169px);
     }
   }
-    box-sizing: border-box;
 
-
-
-
-
-
-
-
-  &--last-card::before{
+  &--last-card::before {
     content: "";
     display: block;
     background-image: url("../../images/icons/stack.svg#card-plus-icon");
     width: 30px;
     height: 30px;
+  }
+
+  &:first-child {
+    @media (max-width: $mobile-width-only) {
+      border-top: 1px solid $mobile-card-border;
+    }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    border-bottom: 1px solid $mobile-card-border;
   }
 }
 
@@ -66,10 +69,10 @@
   margin: 0;
   text-transform: uppercase;
   width: 76px;
-  padding-bottom: 14px;
+  padding-bottom: 15px;
   font-weight: 400;
 
-  @media (min-width: $tablet-width){
+  @media (min-width: $tablet-width) {
     justify-self: center;
     width: 135px;
     text-align: center;
@@ -80,28 +83,35 @@
     padding-bottom: 21px;
     align-self: start;
   }
-}
 
-.card__image{
-  grid-area: image;
-
-  @media (min-width: $tablet-width){
-     display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-self: center;
-  width: 200px;
-  height: 210px;
+  @media (min-width: $desktop-width) {
+    padding-top: 12px;
+    padding-bottom: 25px;
   }
 }
 
-.card__product-parametr-list{
+.card__image {
+  grid-area: image;
+  align-self: center;
+  justify-self: center;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    width: 200px;
+    height: 210px;
+  }
+}
+
+.card__product-parametr-list {
   grid-area: list;
   list-style: none;
   padding: 0;
   margin: 0;
 
-  @media (min-width: $tablet-width){
+  @media (min-width: $tablet-width) {
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
@@ -113,24 +123,33 @@
   }
 }
 
-.card__parametr-item{
+.card__parametr-item {
   display: flex;
   justify-content: space-between;
-  @media (min-width: $tablet-width){
 
+  @media (min-width: $tablet-width) {
+    border-bottom: 1px solid $example-border-color;
   }
 }
-.card__parametr-item-taste{
-  padding: 2px 0;
+
+
+.card__parametr-item-taste {
+  @media (min-width: $tablet-width) {
+    padding: 2px 0;
+  }
 }
 
-.card__button{
+.card__button {
   grid-area: button;
-  margin-top: 17px;
+  margin-top: 19px;
   align-self: end;
 
-  @media (min-width: $tablet-width){
-    margin-top: 37px;
+  @media (min-width: $tablet-width) {
+    margin-top: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 42px;
   }
 }
 

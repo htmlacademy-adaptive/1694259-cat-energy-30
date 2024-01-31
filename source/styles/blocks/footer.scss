@@ -1,9 +1,9 @@
-.footer{
+.footer {
   padding: 39px 0;
   background-color: $grey-background-color;
 
   @media (min-width: $tablet-width) {
-    padding: 55px 0;
+    padding: 58px 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -23,12 +23,16 @@
   position: relative;
   justify-content: space-between;
 
-  @media (max-width: $mobile-width-only){
+  @media (max-width: $mobile-width-only) {
     gap: 35px;
   }
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
     justify-content: space-between;
   }
 }
@@ -41,7 +45,7 @@
   justify-content: space-between;
   position: relative;
 
-  @media (max-width: $mobile-width-only){
+  @media (max-width: $mobile-width-only) {
     width: 100%;
   }
 
@@ -51,58 +55,70 @@
   }
 
   &:hover,
-  &:focus{
-    .footer__academy-logo-image{
+  &:focus {
+    .footer__academy-logo-image {
       fill: $base-button-color;
     }
   }
-  &:active{
+
+  &:active {
     opacity: 0.3;
   }
 }
 
-.footer__social-list{
+.footer__social-list {
   list-style: none;
   display: flex;
   gap: 24px;
   padding: 0;
   margin: 0;
   position: relative;
+
   @media (min-width: $tablet-width) {
-    margin-left: 22.5988700565%;
-    margin-right: 16.9491525424%;
+    margin-left: 22.6%;
+    margin-right: 16.95%;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 29px;
+    padding-top: 7px;
   }
 }
 
-.footer__academy-text{
+.footer__academy-text {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   margin: 0;
+
   @media (min-width: $tablet-width) {
     padding-right: 23px;
   }
 }
 
-.footer__logo{
+.footer__logo {
   &:hover,
-  &:focus{
+  &:focus {
     fill: $footer-site-logo-hover;
   }
 
-  &:active{
+  &:active {
     fill: $footer-site-logo-active;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 5px;
   }
 }
 
-.footer__social-link{
-  .footer__social-icon{
+.footer__social-link {
+  .footer__social-icon {
     &:hover,
-    &:focus{
+    &:focus {
       fill: $base-button-color;
     }
 
-    &:active{
+    &:active {
       opacity: 0.3;
     }
   }
