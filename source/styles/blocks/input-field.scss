@@ -62,13 +62,13 @@
 
 .input-field[type="number"]::-webkit-outer-spin-button,
 .input-field[type="number"]::-webkit-inner-spin-button {
-  --webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
 .input-field[type="number"],
 .input-field[type="number"]:hover,
 .input-field[type="number"]:focus {
   appearance: none;
-  --moz-appearance: textfield;
+  -moz-appearance: textfield;
 }
 
