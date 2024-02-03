@@ -15,6 +15,7 @@
   align-items: center;
   justify-content: space-between;
   padding-bottom: 14px;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     padding-bottom: 20px;
@@ -36,10 +37,14 @@
     padding-right: 36px;
     width: 490px;
   }
-}
 
-.contact-details__label {
-  padding-right: 13px;
+  &:focus + .contact-details__input-email-icon::after{
+    background-color: $base-button-color;
+  }
+
+  &:user-invalid + .contact-details__input-email-icon::after{
+    background-color: $input-error;
+  }
 }
 
 .contact-details__input-phone {
@@ -53,17 +58,20 @@
     padding-right: 36px;
     width: 472px;
   }
+
+  &:focus + .contact-details__input-phone-icon::after{
+    background-color: $base-button-color;
+  }
+
+  &:user-invalid + .contact-details__input-phone-icon::after{
+    background-color: $input-error;
+  }
 }
 
-.contact-details__input-email-icon {
-  position: absolute;
-  right: 16px;
+.contact-details__label {
+  padding-right: 13px;
 }
 
-.contact-details__input-icon {
-  position: absolute;
-  right: 16px;
-}
 
 .contact-details__title {
   width: 187px;
@@ -119,6 +127,51 @@
 
     &::after {
       top: 92px;
+    }
+  }
+}
+
+.contact-details__input-email-icon{
+  &::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 15px;
+    mask-image: url("../../images/icons/stack.svg#contact-details-email-icon");
+    background-color: $black-text-color;
+    right: 14px;
+    top: 16px;
+
+    @media (min-width: $tablet-width) {
+      right: 15px;
+      top: 18px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 17px;
+    }
+  }
+}
+
+.contact-details__input-phone-icon{
+  &::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 15px;
+    mask-image: url("../../images/icons/stack.svg#contact-details-phone-icon");
+    background-color: $black-text-color;
+    right: 14px;
+    top: 16px;
+    @media (min-width: $tablet-width) {
+      right: 15px;
+      top: 18px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 17px;
     }
   }
 }

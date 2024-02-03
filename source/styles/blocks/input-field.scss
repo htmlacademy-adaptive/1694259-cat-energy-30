@@ -38,7 +38,6 @@
   &:focus {
     border: 1px solid transparent;
     outline: 2px solid $base-color-text;
-
     & + .input-field__icon {
       stroke: $base-button-color;
     }
