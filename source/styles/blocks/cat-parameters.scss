@@ -117,6 +117,13 @@
       border-color: $radio-and-checkbox-hover;
     }
   }
+
+  &:focus,
+  &:focus-visible {
+    .cat-parameters__input-mark {
+      outline: 2px solid $radio-and-checkbox-focus;
+    }
+  }
 }
 
 

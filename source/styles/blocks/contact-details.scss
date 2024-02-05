@@ -38,11 +38,11 @@
     width: 490px;
   }
 
-  &:focus + .contact-details__input-email-icon::after{
+  &:focus + .contact-details__input-email-icon::after {
     background-color: $base-button-color;
   }
 
-  &:user-invalid + .contact-details__input-email-icon::after{
+  &:user-invalid + .contact-details__input-email-icon::after {
     background-color: $input-error;
   }
 }
@@ -59,11 +59,11 @@
     width: 472px;
   }
 
-  &:focus + .contact-details__input-phone-icon::after{
+  &:focus + .contact-details__input-phone-icon::after {
     background-color: $base-button-color;
   }
 
-  &:user-invalid + .contact-details__input-phone-icon::after{
+  &:user-invalid + .contact-details__input-phone-icon::after {
     background-color: $input-error;
   }
 }
@@ -131,8 +131,8 @@
   }
 }
 
-.contact-details__input-email-icon{
-  &::after{
+.contact-details__input-email-icon {
+  &::after {
     content: "";
     display: block;
     position: absolute;
@@ -154,8 +154,8 @@
   }
 }
 
-.contact-details__input-phone-icon{
-  &::after{
+.contact-details__input-phone-icon {
+  &::after {
     content: "";
     display: block;
     position: absolute;
@@ -165,6 +165,7 @@
     background-color: $black-text-color;
     right: 14px;
     top: 16px;
+
     @media (min-width: $tablet-width) {
       right: 15px;
       top: 18px;

@@ -12,3 +12,11 @@ navToggle.addEventListener('click', () => {
     navMain.classList.remove('main-nav--opened');
   }
 });
+
+const locationMap = document.querySelector('.location__map');
+const locationMapPin = document.querySelector('.location__map-pin');
+const locationMapImg = document.querySelector('.location__map-image');
+
+locationMapImg.classList.add('visually-hidden');
+locationMap.classList.remove('visually-hidden');
+locationMapPin.classList.remove('visually-hidden');

@@ -63,6 +63,7 @@
   color: $card-title-color;
   text-transform: uppercase;
   padding: 13px 0;
+  text-decoration: none;
 
   @media (min-width: $tablet-width) {
     padding: 0;
@@ -115,6 +116,9 @@
 .additional-product-card__button {
   grid-area: button;
   margin-bottom: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
@@ -125,4 +129,3 @@
     margin: 0;
   }
 }
-
