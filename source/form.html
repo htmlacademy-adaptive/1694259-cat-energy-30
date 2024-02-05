@@ -5,13 +5,15 @@
     <title>Cat Energy</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/lato/Lato-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <script src="scripts/index.js" defer></script>
   </head>
     <body class="page__body">
       <header class="main-header">
         <div class="wrapper">
           <nav class="main-nav main-nav--closed main-nav--nojs">
-            <a class="main-nav__logo logo" href="index.html" aria-label="Переход на главную страницу">
+            <a class="main-nav__logo logo" href="index.html" aria-label="Переход на главную страницу.">
               <picture class="logo__image">
                 <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg 1x">
                 <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg 1x">
@@ -23,17 +25,17 @@
             <div class="main-nav__wrapper">
               <ul class="main-nav__list">
                 <li class="main-nav__item">
-                  <a class="main-nav__link main-nav__link--basic" href="index.html">
+                  <a class="main-nav__link main-nav__link--basic" href="index.html" aria-label="Переход на главную страницу.">
                     Главная
                   </a>
                 </li>
                 <li class="main-nav__item">
-                  <a class="main-nav__link main-nav__link--basic" href="catalog.html">
+                  <a class="main-nav__link main-nav__link--basic" href="catalog.html" aria-label="Переход на страницу каталога.">
                     Каталог продукции
                   </a>
                 </li>
                 <li class="main-nav__item main-nav__item--last-item main-nav__item--active">
-                  <a class="main-nav__link main-nav__link--basic" href="form.html">
+                  <a class="main-nav__link main-nav__link--basic" href="form.html" aria-label="Переход на страницу подбора программы.">
                     Подбор программы
                   </a>
                 </li>
@@ -71,7 +73,7 @@
                     </ul>
                     <ul class="cat-parameters__radio-list">
                       <li class="cat-parameters__radio-item">
-                        <label class="cat-parameters__label" for="weight-loss">
+                        <label class="cat-parameters__label" for="weight-loss" aria-label="Выбор цели программы.">
                           <input class="cat-parameters__radio-input visually-hidden" type="radio" name="program-goal" id="weight-loss" required checked="checked">
                           <span class="cat-parameters__input-mark"></span>
                           <span class="cat-parameters__input-label input-label">Похудение</span>
@@ -121,6 +123,7 @@
                 <li class="program-selection__form-item">
                   <fieldset class="program-selection__form extra-options">
                     <legend class="extra-options__title input-title">Дополнительно</legend>
+                    <span class="extra-options__title visually-hidden">Дополнительные товары, доступные для заказа</span>
                     <ul class="extra-options__checkbox-list">
                       <li class="extra-options__checkbox-item">
                         <label class="extra-options__checkbox-label" for="sweetener">
@@ -173,12 +176,24 @@
                   <p class="location__adress-city">Санкт-Петербург</p>
                 </address>
               </div>
-              <picture class="location__map-pin">
+              <picture class="location__map-pin visually-hidden">
+                <source width="113" height="106" type="image/webp" media="(min-width: 768px)" srcset="images/location-pin@1x.webp 1x, images/location-pin@2x.webp 2x">
+                <source width="57" height="53" type="image/webp" srcset="images/location-pin-mobile@1x.webp 1x, images/location-pin-mobile@2x.webp 2x">
+
                 <source width="113" height="106" type="image/png" media="(min-width: 768px)" srcset="images/location-pin@1x.png 1x, images/location-pin@2x.png 2x">
                 <img src="images/location-pin-mobile@1x.png" srcset="images/location-pin-mobile@2x.png 2x" alt="Отметка местоположения на карте." width="57" height="53">
               </picture>
             </div>
-            <iframe class="location__map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1142.0497260649474!2d30.316897095226842!3d59.9679623343757!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1706200904636!5m2!1sru!2sru"
+            <picture class="location__map-image">
+              <source width="1440" height="400" type="image/webp" media="(min-width: 1440px)" srcset="images/desktop-map@1x.webp 1x, images/desktop-map@2x.webp 2x">
+              <source width="768" height="400" type="image/webp" media="(min-width: 768px)" srcset="images/tablet-map@1x.webp 1x, images/tablet-map@2x.webp 2x">
+              <source width="320" height="362" type="image/webp" srcset="images/mobile-map@1x.webp 1x, images/mobile-map@2x.webp 2x">
+
+              <source width="1440" height="400" type="image/jpg" media="(min-width: 1440px)" srcset="images/desktop-map@1x.jpg 1x, images/desktop-map@2x.jpg 2x">
+              <source width="768" height="400" type="image/jpg" media="(min-width: 768px)" srcset="images/tablet-map@1x.jpg 1x, images/tablet-map@2x.jpg 2x">
+              <img src="images/mobile-map@1x.jpg" srcset="images/mobile-map@2x.jpg 2x" alt="Карта" width="320" height="362">
+            </picture>
+            <iframe class="location__map visually-hidden" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1142.0497260649474!2d30.316897095226842!3d59.9679623343757!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1706200904636!5m2!1sru!2sru"
               loading="lazy" referrerpolicy="no-referrer-when-downgrade">
               </iframe>
           </section>

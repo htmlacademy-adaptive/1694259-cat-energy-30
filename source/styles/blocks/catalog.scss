@@ -128,4 +128,12 @@
   @media (min-width: $desktop-width) {
     margin-top: auto;
   }
+
+  &:hover {
+    background-color: $grey-background-color;
+  }
+
+  &:active {
+    color: $base-color-text;
+  }
 }

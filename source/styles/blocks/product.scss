@@ -3,9 +3,11 @@
     position: relative;
     background-image:
       image-set(
-      url("../../images/product-mobile@1x.png") type("image/png") 1x,
-      url("../../images/product-mobile@2x.png") type("image/png") 2x
-    );
+        url("../../images/product-mobile@1x.webp")  1x,
+        url("../../images/product-mobile@2x.webp") 2x,
+        url("../../images/product-mobile@1x.png") 1x,
+        url("../../images/product-mobile@2x.png") 2x
+      );
     background-repeat: no-repeat;
     background-position: bottom 43px center;
 
@@ -29,7 +31,13 @@
       top: 0;
       left: 0;
       height: 62.92%;
-      background-image: url("../../images/product-background-mobile@2x.png");
+      background-image:
+        image-set(
+          url("../../images/product-background-mobile@1x.webp") 1x,
+          url("../../images/product-background-mobile@2x.webp") 2x,
+          url("../../images/product-background-mobile@1x.png") 1x,
+          url("../../images/product-background-mobile@2x.png") 2x
+        );
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -40,9 +48,11 @@
     padding-bottom: 526px;
     background-image:
       image-set(
-      url("../../images/product-tablet@1x.png") type("image/png") 1x,
-      url("../../images/product-tablet@2x.png") type("image/png") 2x
-    );
+        url("../../images/product-tablet@1x.webp") 1x,
+        url("../../images/product-tablet@2x.webp") 2x,
+        url("../../images/product-tablet@1x.png") 1x,
+        url("../../images/product-tablet@2x.png") 2x
+      );
     background-repeat: no-repeat;
     background-position: bottom center;
   }
@@ -53,9 +63,11 @@
 
     background-image:
       image-set(
-      url("../../images/product-desktop@1x.png") type("image/png") 1x,
-      url("../../images/product-desktop@2x.png") type("image/png") 2x
-    );
+        url("../../images/product-desktop@1x.webp")  1x,
+        url("../../images/product-desktop@2x.webp")  2x,
+        url("../../images/product-desktop@1x.png")  1x,
+        url("../../images/product-desktop@2x.png")  2x
+      );
     background-repeat: no-repeat;
     background-position: bottom 52px left 63%;
 
@@ -80,7 +92,13 @@
       z-index: -50;
       top: 0;
       right: 0;
-      background-image: url("../../images/product-background-desktop@2x.png");
+      background-image:
+        image-set(
+          url("../../images/product-background-desktop@1x.webp") 1x,
+          url("../../images/product-background-desktop@2x.webp")  2x,
+          url("../../images/product-background-desktop@1x.png")  1x,
+          url("../../images/product-background-desktop@2x.png")  2x
+        );
       background-position: left;
       background-size: cover;
       background-repeat: no-repeat;

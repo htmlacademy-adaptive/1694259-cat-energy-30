@@ -38,6 +38,7 @@
   &:focus {
     border: 1px solid transparent;
     outline: 2px solid $base-color-text;
+
     & + .input-field__icon {
       stroke: $base-button-color;
     }
@@ -61,13 +62,11 @@
 
 .input-field[type="number"]::-webkit-outer-spin-button,
 .input-field[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+  appearance: none;
 }
 
 .input-field[type="number"],
 .input-field[type="number"]:hover,
 .input-field[type="number"]:focus {
   appearance: none;
-  -moz-appearance: textfield;
 }
-
